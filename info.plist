@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainMenu</key>
+	<dict>
+	    <key>contactName</key>
+        <string>Leon Hong</string>
+    	<key>contactEmailRot13</key>
+    	<string>yo@onebitwonder.com</string>
+    	<key>description</key>
+    	<string>Android is a software platform and operating system for mobile devices.</string>
+		<key>items</key>
+		<array>
+			<string>0813B9C2-8858-4EF4-8A2A-D24EB636A8EE</string>
+			<string>------------------------------------</string>
+			<string>20103568-C972-48F8-8AE4-CFB27A13F82B</string>
+			<string>F0E3C03B-95C8-4B36-A4C4-6BE4BFFC28AC</string>
+			<string>16626432-26B1-4D72-A0A5-E320E03E26D6</string>
+			<string>------------------------------------</string>
+			<string>C280ABF1-A4FA-4557-B44B-CF5F2863C13E</string>
+			<string>5403351A-3F0E-45FB-BAF5-58672EDF25F8</string>
+			<string>0FB24105-9C4E-4C38-8112-84F60898D8F5</string>
+			<string>10787EEC-97F2-426D-962C-B7AA6D688BFE</string>
+			<string>------------------------------------</string>
+			<string>7B86DDF7-6600-4238-AE81-7B9EE65ED0E3</string>
+			<string>9A5C0AF3-0D09-4887-B648-A2D21D8DC347</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>7B86DDF7-6600-4238-AE81-7B9EE65ED0E3</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>91ECE751-FE98-40CF-9802-224CC9418431</string>
+					<string>7D6965BC-6DE0-4FD9-9D0E-072F9CC9BC38</string>
+				</array>
+				<key>name</key>
+				<string>tools</string>
+			</dict>
+			<key>9A5C0AF3-0D09-4887-B648-A2D21D8DC347</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>499D3928-929D-4EC7-98C6-AE1AA0F27C95</string>
+					<string>E78B0264-E853-4AFE-938C-F66B16C94772</string>
+					<string>3DAA31C9-FCDA-46CB-9325-820162A849B3</string>
+				</array>
+				<key>name</key>
+				<string>help</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>Android</string>
+	<key>ordering</key>
+	<array>
+		<string>0813B9C2-8858-4EF4-8A2A-D24EB636A8EE</string>
+		<string>20103568-C972-48F8-8AE4-CFB27A13F82B</string>
+		<string>F0E3C03B-95C8-4B36-A4C4-6BE4BFFC28AC</string>
+		<string>16626432-26B1-4D72-A0A5-E320E03E26D6</string>
+		<string>C280ABF1-A4FA-4557-B44B-CF5F2863C13E</string>
+		<string>5403351A-3F0E-45FB-BAF5-58672EDF25F8</string>
+		<string>0FB24105-9C4E-4C38-8112-84F60898D8F5</string>
+		<string>10787EEC-97F2-426D-962C-B7AA6D688BFE</string>
+		<string>7D6965BC-6DE0-4FD9-9D0E-072F9CC9BC38</string>
+		<string>91ECE751-FE98-40CF-9802-224CC9418431</string>
+		<string>499D3928-929D-4EC7-98C6-AE1AA0F27C95</string>
+		<string>E78B0264-E853-4AFE-938C-F66B16C94772</string>
+		<string>3DAA31C9-FCDA-46CB-9325-820162A849B3</string>
+	</array>
+	<key>uuid</key>
+	<string>59E964D9-87DB-470D-BDF6-2AB1225C4926</string>
+</dict>
+</plist>

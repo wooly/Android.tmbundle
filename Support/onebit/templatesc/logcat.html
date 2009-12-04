@@ -1,0 +1,29 @@
+from __future__ import division
+from jinja2.runtime import LoopContext, TemplateReference, Macro, Markup, TemplateRuntimeError, missing, concat, escape, markup_join, unicode_join, to_string, TemplateNotFound
+def run(environment):
+    name = '/logcat.html'
+
+    def root(context, environment=environment):
+        parent_template = None
+        if 0: yield None
+        parent_template = environment.get_template('base.html', '/logcat.html')
+        for name, parent_block in parent_template.blocks.iteritems():
+            context.blocks.setdefault(name, []).append(parent_block)
+        for event in parent_template.root_render_func(context):
+            yield event
+
+    def block_content(context, environment=environment):
+        if 0: yield None
+        yield u'\n    <h3>Launching Logcat with Console.app</h3>\n    <pre id="output"></pre>\n'
+
+    def block_style(context, environment=environment):
+        if 0: yield None
+        yield u'\n\n'
+
+    def block_script(context, environment=environment):
+        if 0: yield None
+        yield u'\n    cmd(\'cd "$TM_BUNDLE_SUPPORT"\');\n    cmd(\'cd onebit/tmp\');\n    cmd(\'> logcat.onebit\');\n    cmd(\'"$ANDROID_SDK/tools/adb" logcat >> logcat.onebit\');\n    \n    var result = TextMate.system(command, function(){\n        $(\'h3\').html("Logcat has unexpectedly ended");\n        $(\'#output\').append("\\n"+result.outputString);\n    });\n    command = "";\n    cmd(\'open -a "console.app" "$TM_BUNDLE_SUPPORT/onebit/tmp/logcat.onebit"\');\n    TextMate.system(command, null);\n    $(\'h3\').html("Logcat launched with Console.app");\n    $(\'#output\').html(\'Closing this window will stop logcat\');\n    //$(\'#output\').append("\\n"+result.errorString);\n    TextMate.isBusy = true;\n'
+
+    blocks = {'content': block_content, 'style': block_style, 'script': block_script}
+    debug_info = '1=9&26=15&22=19&3=23'
+    return locals()

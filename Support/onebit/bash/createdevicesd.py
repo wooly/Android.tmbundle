@@ -1,0 +1,93 @@
+import sys
+import os
+import pexpect
+
+def main(*args):  
+    cmd = '"%s/tools/android" create avd -n %s -t %s -c %s' % (os.environ['ANDROID_SDK'], args[2], args[3], args[1])
+         
+    child = pexpect.spawn(cmd)
+    
+    try:
+        child.expect('Do you wish to create.*')
+
+        child.sendline("yes")
+
+        child.expect('SD Card support.*')
+        child.sendline(args[4])
+
+        child.expect('Abstracted.*')
+        child.sendline(args[5])
+
+        child.expect('DPad support.*')
+        child.sendline(args[6])
+
+        child.expect('Accelerometer.*')
+        child.sendline(args[7])
+
+        child.expect('Maximum horizontal.*')
+        child.sendline(args[8])
+
+        child.expect('Cache partition.*')
+        child.sendline(args[9])
+
+        child.expect('Audio playback.*')
+        child.sendline(args[10])
+
+        child.expect('Track-ball support.*')
+        child.sendline(args[11])
+
+        child.expect('Maximum vertical.*')
+        child.sendline(args[12])
+
+        child.expect('Data partition.*')
+        child.sendline(args[13])
+
+        child.expect('Camera support.*')
+        child.sendline(args[14])
+
+        child.expect('Battery support.*')
+        child.sendline(args[15])
+
+        child.expect('Touch-screen support.*')
+        child.sendline(args[16])
+
+        child.expect('Audio recording support.*')
+        child.sendline(args[17])
+
+        child.expect('GPS support.*')
+        child.sendline(args[18])
+
+        child.expect('System partition.*')
+        child.sendline(args[19])
+
+        child.expect('Cache partition support.*')
+        child.sendline(args[20])
+
+        child.expect('Keyboard support.*')
+        child.sendline(args[21])
+
+        child.expect('Max VM application.*')
+        child.sendline(args[22])
+
+        child.expect('Device ram size.*')
+        child.sendline(args[23])
+
+        child.expect('GSM modem support.*')
+        child.sendline(args[24])
+
+        child.sendline(args[24])
+        child.expect ('\r\n')
+        
+        if(str(child).find("before (last 100 chars): hw.gsmModem [yes]:yes")!=-1 or str(child).find("exitstatus: None")!=-1):
+            return str("OK")
+
+        return str(child)
+            
+    except Exception, e:
+        return str(e)
+    
+    
+    
+        
+if __name__ == "__main__":
+    sys.stdout.write(main(*sys.argv))

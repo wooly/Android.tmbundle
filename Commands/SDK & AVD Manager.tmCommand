@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>"$ANDROID_SDK/tools/android" &gt; /dev/null 2&gt;&amp;1 &amp;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>SDK &amp; AVD Manager</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>0813B9C2-8858-4EF4-8A2A-D24EB636A8EE</string>
+</dict>
+</plist>
