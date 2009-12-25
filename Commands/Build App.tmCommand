@@ -14,6 +14,8 @@
 	<string>Build App</string>
 	<key>output</key>
 	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.java</string>
 	<key>uuid</key>
 	<string>5403351A-3F0E-45FB-BAF5-58672EDF25F8</string>
 </dict>
