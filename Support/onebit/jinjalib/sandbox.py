@@ -13,10 +13,10 @@
     :license: BSD.
 """
 import operator
-from jinja2.runtime import Undefined
-from jinja2.environment import Environment
-from jinja2.exceptions import SecurityError
-from jinja2.utils import FunctionType, MethodType, TracebackType, CodeType, \
+from jinjalib.runtime import Undefined
+from jinjalib.environment import Environment
+from jinjalib.exceptions import SecurityError
+from jinjalib.utils import FunctionType, MethodType, TracebackType, CodeType, \
      FrameType, GeneratorType
 
 
@@ -108,7 +108,7 @@ def is_internal_attribute(obj, attr):
     python objects.  This is useful if the environment method
     :meth:`~SandboxedEnvironment.is_safe_attribute` is overriden.
 
-    >>> from jinja2.sandbox import is_internal_attribute
+    >>> from jinjalib.sandbox import is_internal_attribute
     >>> is_internal_attribute(lambda: None, "func_code")
     True
     >>> is_internal_attribute((lambda x:x).func_code, 'co_code')

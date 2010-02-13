@@ -13,8 +13,8 @@ try:
     from hashlib import sha1
 except ImportError:
     from sha import new as sha1
-from jinja2.exceptions import TemplateNotFound
-from jinja2.utils import LRUCache, open_if_exists, internalcode
+from jinjalib.exceptions import TemplateNotFound
+from jinjalib.utils import LRUCache, open_if_exists, internalcode
 
 
 def split_template_path(template):
@@ -41,7 +41,7 @@ class BaseLoader(object):
     A very basic example for a loader that looks up templates on the file
     system could look like this::
 
-        from jinja2 import BaseLoader, TemplateNotFound
+        from jinjalib import BaseLoader, TemplateNotFound
         from os.path import join, exists, getmtime
 
         class MyLoader(BaseLoader):

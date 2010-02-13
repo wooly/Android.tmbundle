@@ -150,7 +150,7 @@ def is_undefined(obj):
                 return default
             return var
     """
-    from jinja2.runtime import Undefined
+    from jinjalib.runtime import Undefined
     return isinstance(obj, Undefined)
 
 
@@ -166,8 +166,8 @@ def clear_caches():
     the time.  Normally you don't have to care about that but if you are
     messuring memory consumption you may want to clean the caches.
     """
-    from jinja2.environment import _spontaneous_environments
-    from jinja2.lexer import _lexer_cache
+    from jinjalib.environment import _spontaneous_environments
+    from jinjalib.lexer import _lexer_cache
     _spontaneous_environments.clear()
     _lexer_cache.clear()
 
@@ -267,7 +267,7 @@ def urlize(text, trim_url_limit=None, nofollow=False):
 
 def generate_lorem_ipsum(n=5, html=True, min=20, max=100):
     """Generate some lorem impsum for the template."""
-    from jinja2.constants import LOREM_IPSUM_WORDS
+    from jinjalib.constants import LOREM_IPSUM_WORDS
     from random import choice, random, randrange
     words = LOREM_IPSUM_WORDS.split()
     result = []
@@ -422,7 +422,7 @@ class Markup(unicode):
         >>> Markup("Main &raquo; <em>About</em>").unescape()
         u'Main \xbb <em>About</em>'
         """
-        from jinja2.constants import HTML_ENTITIES
+        from jinjalib.constants import HTML_ENTITIES
         def handle_match(m):
             name = m.group(1)
             if name in HTML_ENTITIES:
@@ -744,7 +744,7 @@ class Joiner(object):
 # we have to import it down here as the speedups module imports the
 # markup type which is define above.
 try:
-    from jinja2._speedups import escape, soft_unicode
+    from jinjalib._speedups import escape, soft_unicode
 except ImportError:
     def escape(s):
         """Convert the characters &, <, >, ' and " in string s to HTML-safe

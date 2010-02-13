@@ -15,6 +15,10 @@ for device in devices:
         device_count+=1
         device_str += (device.split("\t")[0]+" ")
 
+if device_str[0:20] == "* daemon not running":
+    device_str = ""
+    device_count = 0
+
 try:
     f = open(os.environ['TM_PROJECT_DIRECTORY']+"/AndroidManifest.xml")
     text = f.read()

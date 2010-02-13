@@ -14,6 +14,10 @@ for device in devices:
     if device!='':
         device_count+=1
         device_str += (device.split("\t")[0]+" ")
+    
+if device_str[0:20] == "* daemon not running":
+    device_str = ""
+    device_count = 0
 
 print template.render(
     title='Logcat', 

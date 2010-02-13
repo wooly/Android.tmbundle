@@ -11,12 +11,12 @@
     :license: BSD.
 """
 from collections import deque
-from jinja2 import nodes
-from jinja2.defaults import *
-from jinja2.environment import get_spontaneous_environment
-from jinja2.runtime import Undefined, concat
-from jinja2.exceptions import TemplateAssertionError, TemplateSyntaxError
-from jinja2.utils import contextfunction, import_string, Markup, next
+from jinjalib import nodes
+from jinjalib.defaults import *
+from jinjalib.environment import get_spontaneous_environment
+from jinjalib.runtime import Undefined, concat
+from jinjalib.exceptions import TemplateAssertionError, TemplateSyntaxError
+from jinjalib.utils import contextfunction, import_string, Markup, next
 
 
 # the only real useful gettext functions for a Jinja template.  Note
@@ -351,7 +351,7 @@ def extract_from_ast(node, gettext_functions=GETTEXT_FUNCTIONS,
 
     This example explains the behavior:
 
-    >>> from jinja2 import Environment
+    >>> from jinjalib import Environment
     >>> env = Environment()
     >>> node = env.parse('{{ (_("foo"), _(), ngettext("foo", "bar", 42)) }}')
     >>> list(extract_from_ast(node))

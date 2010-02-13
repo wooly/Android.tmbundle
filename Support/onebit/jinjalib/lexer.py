@@ -17,8 +17,8 @@
 import re
 from operator import itemgetter
 from collections import deque
-from jinja2.exceptions import TemplateSyntaxError
-from jinja2.utils import LRUCache, next
+from jinjalib.exceptions import TemplateSyntaxError
+from jinjalib.utils import LRUCache, next
 
 
 # cache for the lexers. Exists in order to be able to have multiple
@@ -38,7 +38,7 @@ try:
 except SyntaxError:
     name_re = re.compile(r'\b[a-zA-Z_][a-zA-Z0-9_]*\b')
 else:
-    from jinja2 import _stringdefs
+    from jinjalib import _stringdefs
     name_re = re.compile(r'[%s][%s]*' % (_stringdefs.xid_start,
                                          _stringdefs.xid_continue))
 

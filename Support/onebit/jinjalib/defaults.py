@@ -8,7 +8,7 @@
     :copyright: (c) 2009 by the Jinja Team.
     :license: BSD, see LICENSE for more details.
 """
-from jinja2.utils import generate_lorem_ipsum, Cycler, Joiner
+from jinjalib.utils import generate_lorem_ipsum, Cycler, Joiner
 
 
 # defaults for the parser / lexer
@@ -31,8 +31,8 @@ except NameError:
 
 
 # default filters, tests and namespace
-from jinja2.filters import FILTERS as DEFAULT_FILTERS
-from jinja2.tests import TESTS as DEFAULT_TESTS
+from jinjalib.filters import FILTERS as DEFAULT_FILTERS
+from jinjalib.tests import TESTS as DEFAULT_TESTS
 DEFAULT_NAMESPACE = {
     'range':        range_func,
     'dict':         lambda **kw: kw,

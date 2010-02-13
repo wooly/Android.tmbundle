@@ -11,10 +11,10 @@
 from cStringIO import StringIO
 from itertools import chain
 from copy import deepcopy
-from jinja2 import nodes
-from jinja2.visitor import NodeVisitor, NodeTransformer
-from jinja2.exceptions import TemplateAssertionError
-from jinja2.utils import Markup, concat, escape, is_python_keyword, next
+from jinjalib import nodes
+from jinjalib.visitor import NodeVisitor, NodeTransformer
+from jinjalib.exceptions import TemplateAssertionError
+from jinjalib.utils import Markup, concat, escape, is_python_keyword, next
 
 
 operators = {
@@ -729,9 +729,9 @@ class CodeGenerator(NodeVisitor):
 
     def visit_Template(self, node, frame=None):
         assert frame is None, 'no root frame allowed'
-        from jinja2.runtime import __all__ as exported
+        from jinjalib.runtime import __all__ as exported
         self.writeline('from __future__ import division')
-        self.writeline('from jinja2.runtime import ' + ', '.join(exported))
+        self.writeline('from jinjalib.runtime import ' + ', '.join(exported))
         
         # MODIFIED FOR GAEFY JINJA 
         # start --------------------------

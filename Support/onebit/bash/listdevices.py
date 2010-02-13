@@ -12,6 +12,11 @@ def main(*args):
         if device!='':
             device_count+=1
             device_str += (device.split("\t")[0]+" ")
+    
+    if device_str[0:20] == "* daemon not running":
+        device_str = ""
+        device_count = 0
+    
     return device_str
 
 if __name__ == "__main__":

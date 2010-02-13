@@ -13,7 +13,7 @@
     :license: BSD, see LICENSE.txt for more details.
 """
 from os import path
-from jinja2.exceptions import TemplateNotFound
+from jinjalib.exceptions import TemplateNotFound
 
 
 class ModuleLoader(object):

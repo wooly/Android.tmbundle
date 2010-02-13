@@ -9,15 +9,15 @@
     :license: BSD, see LICENSE for more details.
 """
 import sys
-from jinja2 import nodes
-from jinja2.defaults import *
-from jinja2.lexer import get_lexer, TokenStream
-from jinja2.parser import Parser
-from jinja2.optimizer import optimize
-from jinja2.compiler import generate
-from jinja2.runtime import Undefined, new_context
-from jinja2.exceptions import TemplateSyntaxError
-from jinja2.utils import import_string, LRUCache, Markup, missing, \
+from jinjalib import nodes
+from jinjalib.defaults import *
+from jinjalib.lexer import get_lexer, TokenStream
+from jinjalib.parser import Parser
+from jinjalib.optimizer import optimize
+from jinjalib.compiler import generate
+from jinjalib.runtime import Undefined, new_context
+from jinjalib.exceptions import TemplateSyntaxError
+from jinjalib.utils import import_string, LRUCache, Markup, missing, \
      concat, consume, internalcode
 
 
@@ -504,7 +504,7 @@ class Environment(object):
         # get any exceptions in template rendering there is no need to load
         # all of that.
         if _make_traceback is None:
-            from jinja2.debug import make_traceback as _make_traceback
+            from jinjalib.debug import make_traceback as _make_traceback
         traceback = _make_traceback(exc_info, source_hint)
         if rendered and self.exception_formatter is not None:
             return self.exception_formatter(traceback)

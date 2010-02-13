@@ -17,7 +17,7 @@
     :copyright: 2009 by tipfy.org.
     :license: BSD, see LICENSE.txt for more details.
 """
-from jinja2.loaders import FileSystemLoader, PackageLoader, DictLoader, \
+from jinjalib.loaders import FileSystemLoader, PackageLoader, DictLoader, \
     FunctionLoader, PrefixLoader, ChoiceLoader
 
 class BaseCodeLoader(object):
